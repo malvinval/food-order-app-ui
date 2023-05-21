@@ -4,12 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700;800&display=swap');
 
-#container {
-  width: 100%;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+#book-table-btn, #view-menu-btn {
+    border-radius: 50px;
 }
-

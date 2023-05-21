@@ -1,11 +1,10 @@
-import { Fragment } from "react";
 import '../../index.css';
 
 const Navbar = () => {
     const element = (
-        <div className="w-full md:w-1/2 navbar bg-white mx-auto shadow-xl rounded-b-3xl font-garamond">
+        <div className="fixed top-0 left-0 right-0 w-full md:w-1/2 navbar bg-white mx-auto shadow-xl rounded-b-3xl font-garamond">
             <div className="flex-1 px-5">
-                <a className="normal-case text-xl tracking-wide font-weight-800">Neetfood</a>
+                <a href="#!" className="normal-case text-xl tracking-wide font-weight-800">Neetfood</a>
             </div>
             <div className="flex-none">
                 <div className="dropdown dropdown-end">
@@ -28,18 +27,18 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                    <img src="https://randomuser.me/api/portraits/med/women/59.jpg" />
+                    <img src="https://randomuser.me/api/portraits/med/women/59.jpg" alt="" />
                     </div>
                 </label>
                 <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                    <a className="justify-between">
+                    <a href="#!" className="justify-between">
                         Profile
                         <span className="badge">New</span>
                     </a>
                     </li>
-                    <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a href="#!">Settings</a></li>
+                    <li><a href="#!">Logout</a></li>
                 </ul>
                 </div>
             </div>
