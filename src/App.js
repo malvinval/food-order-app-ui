@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useState } from "react";
+import './index.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const element = (
+    <>
+      <h1 className="text-red-500 text-9xl">Tailwind</h1>
+    </>
   );
+
+  return element;
 }
 
 export default App;
