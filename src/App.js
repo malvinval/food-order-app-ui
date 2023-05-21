@@ -1,11 +1,13 @@
-import { Fragment, useState } from "react";
-import './index.css'
+import { useState } from "react";
+import './index.css';
+import Navbar from "./components/ui/Navbar";
 
 const App = () => {
   const element = (
-    <>
-      <h1 className="text-red-500 text-9xl">Tailwind</h1>
-    </>
+    <div id="container">
+      <Navbar />
+      
+    </div>
   );
 
   return element;
