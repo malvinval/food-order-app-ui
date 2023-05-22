@@ -8,6 +8,8 @@ module.exports = {
       },
       fontWeight: {
         'weight-800': '800'
+      }, width: {
+        '17/20': '85%'
       }
     },
   },
