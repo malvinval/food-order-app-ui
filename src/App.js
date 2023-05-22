@@ -37,7 +37,7 @@ const App = () => {
           </div>
           <div className="mt-10 lg:mt-0 w-full lg:w-1/2 h-full flex flex-col items-center lg:items-start justify-center lg:pl-8">
             <div id="second-body-title-container" className="w-3/4 lg:w-full">
-              <h1 className="font-garamond font-weight-800 text-4xl lg:text-6xl text-center lg:text-left">Why Neetfood?</h1>
+              <h1 className="font-garamond font-weight-800 text-4xl lg:text-6xl text-center">Why Neetfood?</h1>
             </div>
 
             <div id="second-body-text-container" className="w-3/4 lg:w-full my-5">
