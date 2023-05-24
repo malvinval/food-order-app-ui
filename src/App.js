@@ -6,7 +6,7 @@ import CookingIMG from "./components/ui/img/cooking.jpg";
 const App = () => {
   const element = (
     <div id="container" className="">
-      <Navbar />
+      <Navbar position="top" />
       <div className='flex justify-center'>
       <div id="body-content-container" className="w-full lg:w-1/2 flex flex-col items-center mt-24 lg:mt-28">
         <div id="first-body-content" className="w-full flex flex-col-reverse lg:flex-row justify-center">
@@ -48,7 +48,7 @@ const App = () => {
           </div>
         </div>
 
-        <div id="third-body-content" className="w-full flex flex-col-reverse lg:flex-row mt-14 justify-center">
+        <div id="third-body-content" className="mb-14 lg:mb-32 w-full flex flex-col-reverse lg:flex-row mt-14 justify-center">
           <div className="w-full mt-10 lg:mt-0 h-full flex flex-col items-center lg:items-end justify-center">
             <div id="first-body-title-container" className="w-3/4 lg:w-full">
               <h1 className="font-garamond font-weight-800 text-4xl lg:text-6xl text-center lg:text-justify">We are open!</h1>
@@ -66,6 +66,7 @@ const App = () => {
         </div>
       </div>
       </div>
+      <Navbar position="bottom" />
     </div>
   );
 
