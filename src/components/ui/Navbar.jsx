@@ -10,16 +10,16 @@ const Navbar = (props) => {
             {
                 props.position === "bottom" ?
                 <div className="px-5 flex w-full justify-between lg:justify-evenly">
-                    <a href="/" className="hover:bg-gray-100 rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                    <a href="/" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                         <GrHomeRounded />
                     </a>
-                    <a href="/menu" className="hover:bg-gray-100 rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                    <a href="/menu" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                         <BiFoodMenu />
                     </a>
-                    <a href="/history" className="hover:bg-gray-100 rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                    <a href="/history" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                         <BsClockHistory />
                     </a>
-                    <a href="/bookmarks" className="hover:bg-gray-100 rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                    <a href="/bookmarks" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                         <BiBookmarkHeart />
                     </a>
                 </div>
