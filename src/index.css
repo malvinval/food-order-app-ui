@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700;800&display=swap');
 
-#book-table-btn, #view-menu-btn {
+#book-table-btn, #view-menu-btn, #add-to-cart-btn {
     border-radius: 50px;
 }
 

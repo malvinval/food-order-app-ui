@@ -66,7 +66,7 @@ const App = () => {
         </div>
       </div>
       </div>
-      <Navbar position="bottom" />
+      <Navbar position="bottom" route="/" />
     </div>
   );
 

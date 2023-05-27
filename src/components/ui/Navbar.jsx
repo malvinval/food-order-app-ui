@@ -3,6 +3,7 @@ import { GrHomeRounded } from 'react-icons/gr';
 import { BiFoodMenu } from 'react-icons/bi';
 import { BsClockHistory } from 'react-icons/bs';
 import { BiBookmarkHeart } from 'react-icons/bi';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navbar = (props) => {
     const element = (
@@ -10,18 +11,31 @@ const Navbar = (props) => {
             {
                 props.position === "bottom" ?
                 <div className="px-5 flex w-full justify-between lg:justify-evenly">
-                    <a href="/" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
-                        <GrHomeRounded />
-                    </a>
-                    <a href="/menu" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
-                        <BiFoodMenu />
-                    </a>
-                    <a href="/history" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
-                        <BsClockHistory />
-                    </a>
-                    <a href="/bookmarks" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
-                        <BiBookmarkHeart />
-                    </a>
+                    <div className={`${props.route === "/" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
+                        <a href="/" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                            <GrHomeRounded />
+                        </a>
+                    </div>
+                    <div className={`${props.route === "/menu" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
+                        <a href="/menu" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                            <BiFoodMenu />
+                        </a>
+                    </div>
+                    <div className={`${props.route === "/cart" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
+                        <a href="/cart" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                            <AiOutlineShoppingCart />
+                        </a>
+                    </div>
+                    <div className={`${props.route === "/history" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
+                        <a href="/history" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                            <BsClockHistory />
+                        </a>
+                    </div>
+                    <div className={`${props.route === "/bookmarks" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
+                        <a href="/bookmarks" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                            <BiBookmarkHeart />
+                        </a>
+                    </div>
                 </div>
                 :
                 <>

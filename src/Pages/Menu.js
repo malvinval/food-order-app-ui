@@ -34,7 +34,7 @@ const Menu = () => {
                                                 <h2 className="card-title">{d.name}</h2>
                                                 <p className="text-lg">{d.description}</p>
                                                 <div className="card-actions justify-end">
-                                                    <button className="btn btn-primary">Buy Now</button>
+                                                    <button id="add-to-cart-btn" className="btn btn-accent text-white">Buy Now</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -44,7 +44,7 @@ const Menu = () => {
                         </div>
                     </div>
                 </div>
-            <Navbar position="bottom" />
+            <Navbar position="bottom" route="/menu" />
         </div>
     );
 
