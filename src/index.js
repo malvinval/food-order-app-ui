@@ -5,6 +5,9 @@ import './index.css';
 import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
 import Menu from './Pages/Menu';
+import Cart from './Pages/Cart';
+import Bookmarks from './Pages/Bookmarks';
+import History from './Pages/History';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +17,18 @@ const router = createBrowserRouter([
   {
     path: "/menu",
     element: <Menu />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/history",
+    element: <History />,
+  },
+  {
+    path: "/bookmarks",
+    element: <Bookmarks />,
   },
 ]);
 
