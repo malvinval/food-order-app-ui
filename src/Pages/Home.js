@@ -1,7 +1,7 @@
-import './index.css';
-import Navbar from "./components/ui/Navbar";
-import FoodIMG from "./components/ui/img/food2.png";
-import CookingIMG from "./components/ui/img/cooking.jpg";
+import '../index.css';
+import Navbar from "../components/ui/Navbar";
+import FoodIMG from "../components/ui/img/food2.png";
+import CookingIMG from "../components/ui/img/cooking.jpg";
 
 const App = () => {
   const element = (
