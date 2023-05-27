@@ -20,6 +20,13 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+#menu-card-body {
+    background-image: url("../src/components/ui/img/food-menu-doodle-thin.png");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: -45px -90px;
+}
+
 @media screen and (min-width: 600px) and (max-width: 1024px) {
     #food-img {
         width: 60%;
