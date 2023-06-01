@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import FoodIMG from "../components/ui/img/food2.png";
 import MenuList from "../data/menu.json";
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import "../index.css";
 
 const Menu = () => {
@@ -34,7 +35,9 @@ const Menu = () => {
                                                 <h2 className="card-title">{d.name}</h2>
                                                 <p className="text-lg">{d.description}</p>
                                                 <div className="card-actions justify-end">
-                                                    <button id="add-to-cart-btn" className="btn btn-accent text-white">Buy Now</button>
+                                                    <button id="add-to-cart-btn" className="btn btn-accent text-white">
+                                                        <div className="text-lg flex items-center"><AiOutlineShoppingCart className="mr-2" /> ${d.price}</div>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
