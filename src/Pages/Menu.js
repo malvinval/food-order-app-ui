@@ -9,8 +9,11 @@ import store from "../store";
 import "../index.css";
 import { connect } from 'react-redux';
 import { addToCart } from "../actions";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const Menu = (props) => {
+    const MySwal = withReactContent(Swal)
     const MenuListArr = MenuList.data.menu;
     const [filteredMenu, setFilteredMenu] = useState(MenuListArr[0]);
     const [modalTrigerred, setModalTrigerred] = useState(false);
@@ -28,12 +31,15 @@ const Menu = (props) => {
         setSelectedMenuConstantPrice(price);
         setSelectedMenuQty(1);
     }
-
     
     const handleAddItemToCart = () => {
-
         store.dispatch(addToCart(selectedMenuName, selectedMenuDesc, selectedMenuQty, selectedMenuPrice));
         setModalTrigerred(false)
+        MySwal.fire({
+            title: <strong className="font-garamond">Added to cart!</strong>,
+            html: <i className="font-garamond">{selectedMenuName}</i>,
+            icon: 'success'
+        })
     }
 
     const handleCancelAddToCart = () => {
