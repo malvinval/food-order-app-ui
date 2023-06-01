@@ -8,6 +8,8 @@ import Menu from './Pages/Menu';
 import Cart from './Pages/Cart';
 import Bookmarks from './Pages/Bookmarks';
 import History from './Pages/History';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +36,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

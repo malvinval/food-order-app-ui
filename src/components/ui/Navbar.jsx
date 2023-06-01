@@ -4,6 +4,7 @@ import { BiFoodMenu } from 'react-icons/bi';
 import { BsClockHistory } from 'react-icons/bs';
 import { BiBookmarkHeart } from 'react-icons/bi';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     const element = (
@@ -12,35 +13,35 @@ const Navbar = (props) => {
                 props.position === "bottom" ?
                 <div className="px-5 flex w-full justify-between lg:justify-evenly">
                     <div className={`${props.route === "/" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
-                        <a href="/" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                        <Link to={'/'} className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                             <GrHomeRounded />
-                        </a>
+                        </Link>
                     </div>
                     <div className={`${props.route === "/menu" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
-                        <a href="/menu" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                        <Link to={"/menu"} className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                             <BiFoodMenu />
-                        </a>
+                        </Link>
                     </div>
                     <div className={`${props.route === "/cart" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
-                        <a href="/cart" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                        <Link to={"/cart"} className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                             <AiOutlineShoppingCart />
-                        </a>
+                        </Link>
                     </div>
                     <div className={`${props.route === "/history" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
-                        <a href="/history" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                        <Link to={"/history"} className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                             <BsClockHistory />
-                        </a>
+                        </Link>
                     </div>
                     <div className={`${props.route === "/bookmarks" ? "border-b-4 rounded-b-sm border-b-pink-400":""} py-2 flex`}>
-                        <a href="/bookmarks" className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
+                        <Link to={"/bookmarks"} className="rounded-lg lg:px-10 lg:py-2 normal-case text-xl tracking-wide font-weight-800">
                             <BiBookmarkHeart />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 :
                 <>
                 <div className="flex-1 px-5">
-                    <a href="#!" className="normal-case text-xl tracking-wide font-weight-800">Neetfood</a>
+                    <Link to="#!" className="normal-case text-xl tracking-wide font-weight-800">Neetfood</Link>
                 </div>
                 <div className="flex-none">
                 
@@ -52,12 +53,12 @@ const Navbar = (props) => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                            <a href="#!" className="justify-between">
+                            <Link to="#!" className="justify-between">
                                 Profile
-                            </a>
+                            </Link>
                             </li>
-                            <li><a href="#!">Settings</a></li>
-                            <li><a href="#!">Logout</a></li>
+                            <li><Link to="#!">Settings</Link></li>
+                            <li><Link to="#!">Logout</Link></li>
                         </ul>
                     </div>
                 </div>

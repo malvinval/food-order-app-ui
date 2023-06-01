@@ -5,9 +5,12 @@ import MenuList from "../data/menu.json";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
+import store from "../store";
 import "../index.css";
+import { connect } from 'react-redux';
+import { addToCart } from "../actions";
 
-const Menu = () => {
+const Menu = (props) => {
     const MenuListArr = MenuList.data.menu;
     const [filteredMenu, setFilteredMenu] = useState(MenuListArr[0]);
     const [modalTrigerred, setModalTrigerred] = useState(false);
@@ -24,6 +27,17 @@ const Menu = () => {
         setSelectedMenuPrice(price);
         setSelectedMenuConstantPrice(price);
         setSelectedMenuQty(1);
+    }
+
+    
+    const handleAddItemToCart = () => {
+
+        store.dispatch(addToCart(selectedMenuName, selectedMenuDesc, selectedMenuQty, selectedMenuPrice));
+        setModalTrigerred(false)
+    }
+
+    const handleCancelAddToCart = () => {
+        setModalTrigerred(false);
     }
 
     const handleMenuCartQty = (operator) => {
@@ -105,8 +119,8 @@ const Menu = () => {
                                             </div>
                                         </div>
                                         <div className="modal-action mt-8">
-                                            <label onClick={() => setModalTrigerred(false)} className="btn btn-error text-white">Cancel</label>
-                                            <label htmlFor="my-modal" className="btn">Add to cart</label>
+                                            <label onClick={handleCancelAddToCart} className="btn btn-error text-white">Cancel</label>
+                                            <label onClick={handleAddItemToCart} htmlFor="my-modal" className="btn">Add to cart</label>
                                         </div>
                                     </div>
                                 </div>
@@ -123,4 +137,4 @@ const Menu = () => {
     return element;
 }
 
-export default Menu;
+export default connect(null, { addToCart })(Menu);
